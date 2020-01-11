@@ -479,55 +479,6 @@ footer .bottom .left nav ul:after,
   height: 0;
 }
 
-/*@font-face {
-    font-family: 'montserratlight';
-    src: url("montserrat-light-webfont.eot");
-    src: url("montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("montserrat-light-webfont.woff") format("woff"), url("montserrat-light-webfont.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'montserratregular';
-    src: url("montserrat-regular-webfont.eot");
-    src: url("montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("montserrat-regular-webfont.woff") format("woff"), url("montserrat-regular-webfont.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'montserratbold';
-    src: url("montserrat-bold-webfont.eot");
-    src: url("montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("montserrat-bold-webfont.woff") format("woff"), url("montserrat-bold-webfont.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'robotolight';
-    src: url("roboto-light-webfont.eot");
-    src: url("roboto-light-webfont.eot?#iefix") format("embedded-opentype"), url("roboto-light-webfont.woff") format("woff"), url("roboto-light-webfont.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'robotoregular';
-    src: url("roboto-regular-webfont.eot");
-    src: url("roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("roboto-regular-webfont.woff") format("woff"), url("roboto-regular-webfont.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'robotobold';
-    src: url("roboto-bold-webfont.eot");
-    src: url("roboto-bold-webfont.eot?#iefix") format("embedded-opentype"), url("roboto-bold-webfont.woff") format("woff"), url("roboto-bold-webfont.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'robotoblack';
-    src: url("roboto-black-webfont.eot");
-    src: url("roboto-black-webfont.eot?#iefix") format("embedded-opentype"), url("roboto-black-webfont.woff") format("woff"), url("roboto-black-webfont.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}*/
 html,
 body,
 div,
@@ -701,8 +652,8 @@ img.float-right {
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+  color: white;
+  text-align: center;
   cursor: inherit;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -881,7 +832,7 @@ header nav > ul > li > a:before {
 }
 
 header nav > ul > li > a:hover {
-  color: #086fcf;
+  color: white;
 }
 
 header nav > ul > li > a:hover:before {
@@ -1070,11 +1021,11 @@ header #nav-icon {
 }
 
 .breadcrumb a:hover {
-  color: #086fcf;
+  color: white;
 }
 
 .breadcrumb a:after {
-  color: #b5b6bd;
+  color: white;
   content: ">";
   position: absolute;
   right: 0;
@@ -1838,6 +1789,7 @@ header #nav-icon {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-size: 107.69231%;
+  text-align: center;
   line-height: 128.57143%;
   background: #ff9f80;
   border: 0 none;
@@ -3221,7 +3173,7 @@ footer .socials {
 
   .product-detail #AddToCart {
     background-position: -1000px center;
-    padding: 14px 16px;
+    padding: 16px 16px;
   }
 
   .homepage .main-services {
@@ -4447,3 +4399,9 @@ footer .socials {
 .swatch.error code {
   font-family: monospace;
 }
+/*
+.AddToCartText:empty{
+  display:none;
+}
+*/
+
