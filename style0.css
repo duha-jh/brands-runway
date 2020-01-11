@@ -32,7 +32,10 @@ a:hover, a:focus {
    text-decoration: none;
    color: #1d9b6c;
 }
-
+@media (min-width: 1200px){
+.container {
+width: 1270px;
+}
 .fote{
   font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
    color: white;
