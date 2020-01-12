@@ -1,16 +1,23 @@
+<?php
+session_start();
+
+if ($_SESSION["login"] == false) {
+  echo '<script language="javascript">';
+  echo 'alert("please login first")';
+  echo '</script>';
+  echo "<script>window.top.location.href = \"/BrandsRunway-login.php\";</script>";
+}
+?>
 </!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-
-  <link rel="stylesheet" href="./style1.css">
-
-  <title>Brands Runway</title>
+	<title>Brands Runway</title>
 
 <style type="text/css">
 
@@ -109,8 +116,6 @@ body {
   text-decoration: none;
   border-radius: 50%;
 }
-
-
 input[type="text"] {
   width: 70%;
 }
@@ -146,7 +151,6 @@ form {
 .form-control {
   margin-left: 135px;
   max-width: 1200px;
-  max-height: 40px;
   background-color: white;
   border: 8;
   border-radius: 8px;
@@ -168,6 +172,7 @@ form {
 .sec-bar{
   position: relative;
   width: 100%;
+  z-index: 1000;
   top: 50;
   right: 0;
   left: 0;
@@ -222,41 +227,7 @@ form {
     width: 20px;
   }
 
-/* Slideshow container */
-.slideshow-container {
-  position: absolute;
-  width: 100%;  
-  top: 108px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
-}
 
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
 
 /* Fading animation */
 .fade {
@@ -342,12 +313,12 @@ hr {
 
 .footer{
   position: absolute;
-  top: 880px;
+  top: 730px;
   width: 100%;
 }
  
 .navFooterDescLine{
-  padding: 0.2em;
+  padding: 0.1em;
   color: white;
   background-color: #414958;
   clear: left;
@@ -379,8 +350,6 @@ hr {
   left: 1120;
 
 }
-
-
 
 </style>
   
@@ -461,27 +430,34 @@ hr {
          </a>
        </li>
        <li class="menu-watch">
-         <a href="BrandsRunway-login.html">
+         <a href="BrandsRunway-login.php">
            <span>Login</span>
          </a>
        </li>
        <li class="menu-tv">
-         <a href="BrandsRunway-admin.html">
+         <a href="BrandsRunway-admin.php">
            <span>Cart</span>
+            
+            <!--
+            <div class="header-wrapicon2">
+              <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON"></div>
+            -->
+
          </a>
        </li>
-      
+      </ul>
    </div>
  </nav>
  </div>
 
 
-
-<iframe width="100%" height="100%" src="index1.html"></iframe>
-
+</div>
 
 
+<iframe width="100%" height="100%" src="index4.html"></iframe>
 
+
+    
 
 <div class="footer">
 
@@ -503,14 +479,6 @@ hr {
 </div>
 
 
-
-
-
-
-
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script  src="./script1.js"></script>
 
 
 </body>

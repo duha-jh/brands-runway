@@ -1,3 +1,30 @@
+<?php
+session_start();
+$_SESSION["login"] = false;
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $conn = mysqli_connect('db', 'duha', '123qwe', "myDb");
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+  $sql = "SELECT email From login where email='".$_POST['email']."' and password='".$_POST['password']."'";
+  $result = mysqli_query($conn,$sql);
+  $rowcount = mysqli_num_rows($result);
+  if ($rowcount > 0)
+  {
+    $_SESSION["login"] = true;
+    echo "<script>window.top.location.href = \"/BrandsRunway-admin.php\";</script>";
+  }
+  else
+  {
+    echo '<script language="javascript">';
+    echo 'alert("the email or password is wrong")';
+    echo '</script>';
+  }
+  mysqli_close($conn);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -33,10 +60,11 @@
   </div>
   <fieldset class="form">
     <legend class="form__legend">OR</legend>
-  <form action="" class="form__body form-login">  
-    <input class="form__input" type="email" placeholder="email">
-    <input class="form__input" type="password" placeholder="password">   
-     <button class="btn" type="submit">Sign in</button> 
+  <form name="input" action="" class="form__body form-login" method="POST">  
+    <input class="form__input" type="email" id="email" name="email" placeholder="email">
+    <input class="form__input" type="password" id="password" name="password" placeholder="password">   
+     <!-- <button class="btn" type="submit">Sign in</button> -->
+     <input type="submit" class="btn" value="Sign in" name="sub"/>
   </form>  
     </fieldset>
 </div>
