@@ -9,15 +9,16 @@ SET time_zone = "+00:00";
 
 
 CREATE TABLE `login` (
-  `usernmae` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-INSERT INTO `login` (`usernmae`, `password`) VALUES
-('duha', '123'),
-('ismail', '456'),
-('omar', '789');
+INSERT INTO `login` (`email`, `password`) VALUES
+('duha@gmail.com', '123qwe'),
+('ismail@gmail.com', '456'),
+('omar@gmail.com', '789');
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
