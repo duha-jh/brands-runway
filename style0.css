@@ -35,7 +35,20 @@ a:hover, a:focus {
 @media (min-width: 1200px){
 .container {
 
-    width: 1300px;
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(#b3c0cc, #1f262e, #ffb399);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
 }
 .fote{
   font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -441,7 +454,7 @@ section#contact {
     display: table;
     text-align: center;
     color: white;
-    background-image: linear-gradient(#b3c0cc, #1f262e, #ffb399);
+    background-image: linear-gradient(#ffb399, #1f262e, #b3c0cc);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
